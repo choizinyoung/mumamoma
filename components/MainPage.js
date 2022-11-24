@@ -5,6 +5,7 @@ export default function MainPage() {
   return (
     <View style={styles.container}>
       <Text>안녕하세요</Text>
+      <Text>싱기방기합니다</Text>
       <StatusBar style="auto" />
     </View>
   );
