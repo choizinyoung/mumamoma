@@ -1,11 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import MainPage from './components/MainPage';
 
-export default function App() {
+export default function MainPage() {
   return (
     <View style={styles.container}>
-      <MainPage/>
+      <Text>안녕하세요</Text>
       <StatusBar style="auto" />
     </View>
   );
