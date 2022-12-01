@@ -10,16 +10,13 @@
   },
   "dependencies": {
     "@expo/webpack-config": "^0.17.0",
-<<<<<<< HEAD
     "@react-navigation/drawer": "^6.5.1",
     "@react-navigation/native": "^6.0.16",
     "@react-navigation/stack": "^6.3.5",
-=======
     "@react-native-material/core": "^1.3.7",
     "@react-navigation/drawer": "^6.5.3",
     "@react-navigation/native": "^6.0.16",
     "@react-navigation/stack": "^6.3.7",
->>>>>>> 49743464e73e01971ba9c933078f52a4d5a6fa96
     "expo": "~46.0.16",
     "expo-device": "~4.3.0",
     "expo-status-bar": "~1.4.0",
