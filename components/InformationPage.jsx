@@ -36,7 +36,6 @@ export default class ExampleTwo extends Component {
     )
   }
 }
-
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, backgroundColor: '#fff' },
   head: {  height: 72,  backgroundColor: '#f1f8ff'  },
