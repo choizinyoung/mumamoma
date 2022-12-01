@@ -1,46 +1,111 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-component';
+import { StyleSheet, Text, View, Image, ActivityIndicator } from 'react-native';
 
-export default class ExampleTwo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      tableHead: ['', 'Head1', 'Head2', 'Head3','Header4'],
-      // tableTitle: ['','좋음', '보통', '나쁨', '매우나쁨'],
-      tableData: [
-        ['','좋음','보통','나쁨','매우나쁨'],
-        ['통합지수','Row21','Row22','Row23','Row24',],
-        ['미세먼지','Row21','Row22','Row23','Row24',],
-        ['초미세먼지','Row21','Row22','Row23','Row24',],
-        ['오존','Row21','Row22','Row23','Row24',],
-        ['이산화질소','Row21','Row22','Row23','Row24',],
-        ['일산화탄소','Row21','Row22','Row23','Row24',],
-        ['아황산가스','Row21','Row22','Row23','Row24',],
-      ]
-    }
-  }
-
+export default class App extends React.Component {
   render() {
-    const state = this.state;
     return (
       <View style={styles.container}>
-        <Table borderStyle={{borderWidth: 1}}>
-          <Row data={state.tableHead} flexArr={[1,1,1,1,1,1,1,1]} style={styles.head} textStyle={styles.text}/>
-          <TableWrapper style={styles.wrapper}>
-            <Col data={state.tableTitle} style={styles.title} heightArr={[28,28]} textStyle={styles.text}/>
-            <Rows data={state.tableData} flexArr={[1,1,1,1,1,1,1,1]} style={styles.row} textStyle={styles.text}/>
-          </TableWrapper>
-        </Table>
+        <View style={styles.one}>
+        <View style={styles.whiteView}/>
+        <View style={styles.yellowView}>
+          <Image style={styles.container} source={require('../assets/images/Information_01.png')} resizeMode='cover'></Image>
+        </View>
+        <View style={styles.redView}>
+          <Image style={styles.container} source={require('../assets/images/Information_02.png')} resizeMode='cover'></Image>
+        </View>
+          <View style={styles.yellowView}>
+          <Image style={styles.container} source={require('../assets/images/Information_03.png')} resizeMode='cover'></Image>
+        </View>
+          <View style={styles.redView}>
+          <Image style={styles.container} source={require('../assets/images/Information_04.png')} resizeMode='cover'></Image>
+        </View>
+        </View>
+        <View style={styles.two}>
+          <View style={styles.greenView} />
+          <View style={styles.Title1View}><Text>좋음</Text></View>
+          <View style={styles.Title2View}><Text>보통</Text></View>
+          <View style={styles.Title3View}><Text>나쁨</Text></View>
+          <View style={styles.Title4View}><Text>매우나쁨</Text></View>
+        </View>
+        <View style={styles.third}>
+        <View style={styles.FirstView}><Text>통합지수</Text></View>
+        <View style={styles.PurpleView}><Text></Text></View>
+        <View style={styles.PurpleView}><Text></Text></View>
+        <View style={styles.PurpleView}><Text></Text></View>
+        <View style={styles.PurpleView}><Text></Text></View>
+        </View>
       </View>
-    )
+    );
   }
 }
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 16, backgroundColor: '#fff' },
-  head: {  height: 72,  backgroundColor: '#f1f8ff'  },
-  wrapper: { flexDirection: 'row' },
-  title: { flex: 1, backgroundColor: '#f6f8fa' },
-  row: {  height: 40  },
-  text: { textAlign: 'center' }
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    textAlign: 'center',
+  },
+  one: {
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+  whiteView: {
+    height: 72,
+    width: 72,
+    backgroundColor: 'white',
+  },
+  redView: {
+    height: 72,
+    width: 72,
+    backgroundColor: 'red',
+  },
+  yellowView: {
+    height: 72,
+    width: 72,
+    backgroundColor: 'yellow',
+  },
+  two: {
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+  greenView: {
+    height: 32,
+    width: 72,
+    backgroundColor: 'white',
+  },
+  Title1View: {
+    height: 32,
+    width: 72,
+    backgroundColor: '#AEEDFF',
+  },
+  Title2View: {
+    height: 32,
+    width: 72,
+    backgroundColor: '#CDFFAE',
+  },
+  Title3View: {
+    height: 32,
+    width: 72,
+    backgroundColor: '#FFDFAE',
+  },
+  Title4View: {
+    height: 32,
+    width: 72,
+    backgroundColor: '#FFAEAE',
+  },
+  third:{
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+  PurpleView:{
+    height: 40,
+    width: 72,
+    backgroundColor: '#CEF4FF',
+  },
+  FirstView:{
+    borderBottomColor: 'black',
+    borderBottomWidth: 1,
+  }
 });

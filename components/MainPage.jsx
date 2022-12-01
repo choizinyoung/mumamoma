@@ -14,6 +14,9 @@ import MainImageB from "../assets/images/cloudb.png";
 export default function MainPage({ navigation }) {
   return (
     <View style={styles.container}>
+      <Text>메인페이지</Text>
+      <StatusBar style="auto" />
+      <Image source={MainImage} style={Mainimgstyles.image} />
       <Text>강남구 일원동</Text>
       <Text>날짜 시간 </Text>
       <StatusBar style="auto" />
