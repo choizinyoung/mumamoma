@@ -13,7 +13,7 @@ import MainImage from "../assets/images/cloud_main.png";
 export default function MainPage({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>MainPage</Text>
+      <Text>메인페이지</Text>
       <StatusBar style="auto" />
       <Image source={MainImage} style={Mainimgstyles.image} />
     </View>
